@@ -8,11 +8,11 @@ In the repository settings, open **Pages** and select **Deploy from a branch**, 
 
 ## Before publishing
 
-Before submitting the privacy page to Google Play, add a monitored privacy contact and verify every statement against the released app and all SDKs/services it uses.
+Before submitting the privacy page to Google Play, confirm the contact address is monitored and verify every statement against the released app and all SDKs/services it uses.
 
 Confirm and document:
 
-- A monitored privacy contact.
+- The privacy contact address is monitored and reaches the app operator.
 - Whether any included SDK or third-party service collects or receives data contrary to the statements in the policy.
 - The app's target age groups, advertising status, parent-facing controls, and Google Play declarations.
 - Confirmation that purchase handling and any information returned to the app match the description of Google Play billing.
