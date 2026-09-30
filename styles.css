@@ -219,3 +219,111 @@ h1 em, h2 em { color: var(--coral); font-weight: 500; }
   html { scroll-behavior: auto; }
   *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
 }
+
+body.home-page {
+  --home-sky: #dff5ff;
+  --home-green: #176b43;
+  background: var(--home-sky);
+  color: var(--green-dark);
+}
+
+.home-page .site-header {
+  width: min(100%, 1320px);
+  height: 78px;
+  margin: 0 auto;
+  padding: 0 5vw;
+  border: 0;
+}
+
+.home-page .brand { gap: 9px; font-size: 18px; }
+.brand-icon { display: block; width: 38px; height: 38px; border-radius: 11px; }
+.home-page .site-header nav a { font-size: 13px; }
+.home-page .site-header nav a span { padding-left: 5px; color: var(--coral); font-size: 17px; }
+
+.home-page .hero {
+  width: min(100%, 1320px);
+  min-height: 0;
+  margin: 0 auto;
+  padding: 36px 5vw 48px;
+  grid-template-columns: .72fr 1.28fr;
+  gap: clamp(32px, 5vw, 76px);
+}
+
+.home-page .hero::before { display: none; }
+.home-page .hero-copy { padding: 0; animation: rise-in .6s ease-out both; }
+.home-page .eyebrow { margin-bottom: 17px; color: var(--home-green); font-size: 14px; font-weight: 700; text-transform: none; }
+.home-page .hero h1 { margin-bottom: 19px; font-size: clamp(58px, 7.2vw, 94px); line-height: .98; }
+.home-page .hero h1 em { color: var(--coral); }
+.home-page .hero-intro { max-width: 290px; margin: 0; color: #315f4c; font-size: 17px; line-height: 1.5; }
+.home-page .hero-image {
+  width: 100%;
+  aspect-ratio: 1;
+  min-height: 0;
+  margin: 0;
+  overflow: hidden;
+  isolation: isolate;
+  background: transparent;
+  animation: rise-in .7s .08s ease-out both;
+}
+
+.home-page .hero-image::before {
+  z-index: -1;
+  inset: 5% 2% 3% 1%;
+  border: 0;
+  border-radius: 7px;
+  background: var(--sun);
+  transform: rotate(1.3deg);
+}
+
+.home-page .hero-image img { width: 100%; height: 100%; border-radius: 5px; object-fit: cover; object-position: right center; }
+.home-page .about-section {
+  min-height: 126px;
+  padding: 24px 8vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(14px, 2.5vw, 34px);
+  background: var(--home-green);
+  color: #fffdf2;
+}
+
+.about-icon { display: block; width: 66px; height: 66px; border: 3px solid #fffdf2; border-radius: 18px; }
+.home-page .about-section p { margin: 0; font-family: var(--display); font-size: clamp(22px, 3vw, 31px); line-height: 1.2; }
+.grown-up-link { margin-left: auto; color: #fff4bb; font-size: 13px; font-weight: 700; text-underline-offset: 4px; }
+.grown-up-link span { padding-left: 5px; }
+.home-page .site-footer {
+  width: min(100%, 1320px);
+  min-height: 70px;
+  margin: 0 auto;
+  padding: 16px 5vw;
+  color: #547364;
+}
+
+.home-page .footer-brand { color: var(--green-dark); }
+.home-page .site-footer p { font-size: 11px; }
+.home-page .site-footer > a:not(.brand) { color: var(--green-dark); }
+
+@keyframes rise-in {
+  from { opacity: 0; transform: translateY(14px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 760px) {
+  .home-page .site-header { height: 70px; padding: 0 6vw; }
+  .home-page .brand { font-size: 16px; }
+  .brand-icon { width: 34px; height: 34px; }
+  .home-page .hero { padding: 42px 7vw 45px; grid-template-columns: 1fr; gap: 27px; }
+  .home-page .hero-copy { text-align: center; }
+  .home-page .eyebrow { justify-content: center; margin-bottom: 12px; }
+  .home-page .hero h1 { margin-bottom: 12px; font-size: clamp(57px, 15vw, 78px); }
+  .home-page .hero-intro { max-width: none; font-size: 15px; }
+  .home-page .hero-image { width: 100%; }
+  .home-page .about-section { min-height: 0; padding: 23px 7vw; flex-wrap: wrap; gap: 12px 16px; }
+  .about-icon { width: 52px; height: 52px; border-radius: 14px; }
+  .home-page .about-section p { font-size: 23px; }
+  .grown-up-link { width: 100%; margin: 2px 0 0; text-align: center; }
+  .home-page .site-footer { grid-template-columns: 1fr auto; padding: 18px 6vw; }
+  .home-page .site-footer p { grid-column: 1; grid-row: 2; }
+  .home-page .site-footer > a:not(.brand) { grid-column: 2; grid-row: 1; }
+  .home-page .copyright { grid-column: 2; grid-row: 2; }
+}
