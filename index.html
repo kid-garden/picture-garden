@@ -4,11 +4,11 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#f5f2e9">
-  <meta name="description" content="Kid Garden is the organization behind Picture Garden, an app made for children.">
+  <meta name="description" content="Kid Garden makes playful apps for children. Meet Picture Garden, its first product.">
   <title>Kid Garden | Picture Garden</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Fraunces:opsz,wght,SOFT,WONK@9..144,500,20,1;9..144,600,20,1&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600&family=Nunito:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body class="home-page">
@@ -19,26 +19,56 @@
       <span>Kid Garden</span>
     </a>
     <nav aria-label="Main navigation">
-      <a href="privacy.html">For grown-ups <span aria-hidden="true">↗</span></a>
+      <a href="privacy.html">Privacy</a>
+      <a href="team.html">Our team</a>
     </nav>
   </header>
 
   <main id="main">
     <section class="hero" aria-labelledby="hero-title">
       <div class="hero-copy">
-        <p class="eyebrow">A little world by Kid Garden</p>
+        <p class="eyebrow">Little worlds by Kid Garden</p>
         <h1 id="hero-title">Let wonder<br><em>grow!</em></h1>
-        <p class="hero-intro">Picture Garden, made for little imaginations.</p>
+        <p class="hero-intro">We make mobile apps for our own children and share our favorites with the world.</p>
+        <p class="hero-intro">Kid Garden is committed to:</p>
+        <ul class="commitment-list">
+          <li><span>FUN!</span></li>
+          <li><span>creating safe spaces for children</span></li>
+          <li><span>prioritizing children's online safety</span></li>
+          <li><span>protecting family privacy and security</span></li>
+          <li><span>supporting children's independence</span></li>
+          <li><span>providing strong parental controls</span></li>
+          <li class="commitment-no"><span><strong>NO</strong> data collection</span></li>
+          <li class="commitment-no"><span><strong>NO</strong> account registration</span></li>
+          <li class="commitment-no"><span><strong>NO</strong> ads</span></li>
+        </ul>
       </div>
       <figure class="hero-image">
         <img src="assets/featured.png" alt="Children and a puppy smiling together among garden flowers" fetchpriority="high">
       </figure>
     </section>
 
-    <section class="about-section" aria-label="About Picture Garden">
-      <img src="assets/icon.png" alt="" class="about-icon">
-      <p>Little moments. Big smiles.</p>
-      <a class="grown-up-link" href="privacy.html">Grown-ups, visit our privacy page <span aria-hidden="true">↗</span></a>
+    <section class="product-section" id="products" aria-labelledby="products-title">
+      <div class="product-section-inner">
+        <p class="product-kicker">KID GARDEN PRODUCTS</p>
+        <h2 id="products-title">Safe Spaces to Learn and Grow</h2>
+        <article class="product-item" aria-labelledby="picture-garden-title">
+          <img src="assets/icon.png" alt="Picture Garden app icon" class="product-icon">
+          <div class="product-copy">
+            <p class="product-type">OUR FIRST PRODUCT</p>
+            <h3 id="picture-garden-title">Picture Garden</h3>
+            <p>A playful photo gallery where children can explore family-selected collections in a simple, child-friendly space.</p>
+            <ul class="product-facts">
+              <li>Designed for children and families</li>
+              <li>No personal data collection or account registration in the app</li>
+              <li>No ads; in-app purchases are protected by parental controls</li>
+              <li>Photos stay on your device; the app does not copy, delete, or alter the original files</li>
+              <li>Core features are free, with additional features available through a one-time purchase</li>
+            </ul>
+            <a class="product-link" href="picture-garden.html">Explore Picture Garden <span aria-hidden="true">↗</span></a>
+          </div>
+        </article>
+      </div>
     </section>
   </main>
 
