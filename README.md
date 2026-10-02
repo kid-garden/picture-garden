@@ -4,7 +4,26 @@ Public website for Kid Garden and its children's mobile app, Picture Garden.
 
 ## GitHub Pages
 
-In the repository settings, open **Pages** and select **Deploy from a branch**, then choose the `main` branch and `/ (root)`. The home page is `index.html`; the privacy page is `privacy.html`.
+In the repository settings, open **Pages** and select **Deploy from a branch**, then choose the `main` branch and `/ (root)`. GitHub Pages processes the Jekyll permalinks declared in each page's front matter.
+
+## Local preview
+
+The extensionless page links require a web server that processes the Jekyll permalinks; opening the HTML files directly with `file://` will not work. To preview locally with the same GitHub Pages-compatible Jekyll version:
+
+1. Install Ruby and Bundler. On Windows, RubyInstaller with the MSYS2 development toolchain is a suitable option.
+2. From the repository root, install the dependencies:
+
+	```sh
+	bundle install
+	```
+
+3. Start Jekyll:
+
+	```sh
+	bundle exec jekyll serve
+	```
+
+4. Open `http://127.0.0.1:4000/`. The local routes match production: `/privacy/`, `/team/`, and `/picture-garden/`.
 
 ## Before publishing
 
